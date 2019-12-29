@@ -14,136 +14,215 @@ Most recent revision:
 		<!--Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/download/ -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		
+		<!--Font Awesome Icons copied from https://www.w3schools.com/bootstrap4/bootstrap_icons.asp -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">	
+		
+		<!--Font style sheet copied from https://fonts.google.com/specimen/Ma+Shan+Zheng -->
+		<link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+		
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		
 		<style>
-			a {
-				padding:10px;
+			h1 {
+				font-family: 'Ma Shan Zheng', cursive;
 			}
-			.food thead {
+			.food .head {
 				font-weight: bold;
-				font-size: 18px;
-				text-align:center
+				font-size: 18px;				
 			}			
-			.food tbody {
+			.food .row {
 				text-align: center;
 				vertical-align: top;				
 			}
-			.food td {
-				padding-bottom: 25px;
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-			.drinks table {
-				padding-bottom:30px;
-			}
-			.drinks {
+			.drinks, .food {
 				width:95%;
 				margin: auto;
 			}
-			.drinks tbody tr:nth-child(odd) {
+			.food .body .col, .drinks tbody tr:nth-child(odd) {
 				background-color: #3269a8;
-			}			
-			div {
+				}
+			.container-fluid {
 				background-color: #4287f5;				
-			} 
-						
+			}
+			.drinks td {
+				width: 100%;
+			}
+			.pt-4 {
+			padding-top: ($spacer *1.5 )			
+			}
+			.pb-4 {
+			padding-bottom: ($spacer * 1.5)
+			}			
+
 		</style>
 	</head>
 	<body>
 
 		<header>
-		<h1>Luigi's Bistro</h1>		
+		<h1>Luigi's Bistro</h1>
+		<noscript>
+			<h2 style="color: red;">
+				<br />Warning: This site is best viewed with JavaScript enabled
+			<h2>
+		</noscript>
 		</header>
-		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
-		<style>		
-						
-		</style>
 		<hr />
 
 		<nav>
 			<p>
-				<a href="index.html">Home</a>
-				<a href="menu.html">Menu</a>
-				<a href="contact.html">Contact us</a>
+				<a class="btn badge-pill" href="index.html">
+					<span class="fas fa-home"></span>					
+				</a>
+				<a class="btn badge-pill" href="menu.html">Menu</a>
+				<a class="btn badge-pill" href="contact.html">Contact us</a>
 			</p>			
 		</nav>
 		<hr />
 		
-		<div class="container">
-			<table class=food>
-			<div class="row">
-				<thead>
-					<tr>
-					<div class="col">
-						<th>Burger and Fries</th>
-					</div>	
-					<div class="col">	
-						<th>Hot Dog and Chips</th>
-					</div>	
-					<div class="col">	
-						<th>Italian Sausage and Peppers</th>
-					</div>	
-					</tr>
-				</thead>
-			</div>
-			<div class="row">
-				<tbody>
-					<tr>
-					<div class="col">
-						<td>An American Classic!<br />Your choice - with or without cheese<br />Pickle, onion, tomato, and lettuce<br />Served with our famous thick cut french fries<br />$7.95</td>
+		<div class="container-fluid">
+			<div class="row food">
+				<div class="col-md-4 pt-4">
+					<div class="container-fluid">
+						<div class="row head">
+							<div class="col">
+								Burger and Fries
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								An American Classic!<br />
+								Your choice - with or without cheese<br />
+								Pickle, onion, tomato, and lettuce<br />
+								Served with our famous thick cut french fries<br />
+								$7.95
+							</div>
+						</div>
 					</div>
-					<div class="col">
-						<td>A Summer Classic!<br />Your choice - white or wheat bun<br />Relish, mustard, and ketchup<br />Served with our house-made chips<br />$7.95</td>
+				</div>
+				<div class="col-md-4 pt-4">
+					<div class="container-fluid">
+						<div class="row head">
+							<div class="col">
+								Hot Dogs and Chips
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								A Summer Classic!<br />
+								Your choice - white or wheat bun<br />
+								Relish, mustard, and ketchup<br />
+								Served with our house-made chips<br />
+								$7.95
+							</div>
+						</div>
 					</div>
-					<div class="col">
-						<td>An All-Time Favorite!<br />Your choice - mild or spicy Cole Slaw<br />Served with garlic mashers<br />$10.95</td>
-					</div>	
-					</tr>
-				</tbody>
-			</div>
-			<div class="row">
-				<thead>
-					<tr>
-					<div class="col">
-						<th>Tenderloin Sandwich and Chips</th>
-					</div>	
-						<th>House Salad</th>
-						<th>Brisket Sandwich and Fries</th>
-					</tr>
-				</thead>
+				</div>
+				<div class="col-md-4 pt-4">
+					<div class="container-fluid">
+						<div class="row head">
+							<div class="col">
+								Italian Sausage and Peppers
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								An All-Time Favorite!<br />
+								Your choice - mild or spicy Cole Slaw<br />
+								Served with garlic mashers<br />
+								$10.95
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>	
-				<tbody>
-					<tr>
-						<td>Really Hits the Spot!<br /> Plain or Sesame Seed Bun<br />Pickle, onion, tomato, and lettuce<br />Served with our house-made chips<br />$8.95</td>
-						<td>On the Lighter Side<br />Your choice - with or without cheese<br />Iceberg lettuce, tomatoes, peppers<br />Thousand Island or Ranch Dressing<br />Served with a dinner roll<br />$6.95</td>
-						<td>A Taste of Texas!<br />Smoked Brisket on thick-cut Texas Toast<br /> Cole Slaw<br />Served with our famous thick-cut french fries<br />$7.95</td>
-				</tbody>
-			</table>
-			<table class=drinks>
-				<thead>
-					<tr>
-						<th>Beverages</th>
-						<th></th>
-					<tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Root Beer</td>
-						<td>$3.00</td>
-					</tr>
-					<tr>
-						<td>Bottled Water</td>
-						<td>$1.25</td>
-					</tr>
-					<tr>
-						<td>Lemonade</td>
-						<td>$1.00</td>
-					</tr>
-					<tr>
-						<td>Iced Tea</td>
-						<td>$1.25</td>
-					</tr>
-			</table>
+			<div class="row food">
+				<div class="col-md-4 pt-4">
+					<div class="container-fluid">
+						<div class="row head">
+							<div class="col">
+								Tenderloin Sandwich and Chips
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								Really Hits the Spot!<br />
+								Plain or Sesame Seed Bun<br />
+								Pickle, onion, tomato, and lettuce<br />
+								Served with our house-made chips<br />
+								$8.95
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 pt-4">
+					<div class="container-fluid">
+						<div class="row head">
+							<div class="col">
+								House Salad
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								On the Lighter Side<br />
+								Your choice - with or without cheese<br />
+								Iceberg lettuce, tomatoes, peppers<br />
+								Thousand Island or Ranch Dressing<br />
+								Served with a dinner roll<br />
+								$6.95
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 pt-4">
+					<div class="container-fluid">
+						<div class="row head">
+							<div class="col">
+								Brisket Sandwich and Fries
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								A Taste of Texas!<br />
+								Smoked Brisket on thick-cut Texas Toast<br />
+								Cole Slaw<br />
+								Served with our famous thick-cut french fries<br />
+								$7.95
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>	
+			<div class="row drinks pb-4 pt-4">
+				<div class="col">
+					<table>
+						<thead>
+							<tr>
+								<th>Beverages</th>
+								<th></th>
+							<tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Root Beer</td>
+								<td>$3.00</td>
+							</tr>
+							<tr>
+								<td>Bottled Water</td>
+								<td>$1.25</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$1.00</td>
+							</tr>
+							<tr>
+								<td>Iced Tea</td>
+								<td>$1.25</td>
+							</tr>
+					</table>
+				</div>	
+			</div>	
 		</div>
+		
 		<hr />
 		<footer>
 			<p>1515 Alfalfa Lane, Cypress, CA, 90630</p>

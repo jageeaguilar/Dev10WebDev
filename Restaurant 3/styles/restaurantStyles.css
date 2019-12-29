@@ -1,4 +1,26 @@
+/*restaurantStyles*/
 
 header, footer {
 	text-align: center;	
 }
+
+nav .btn {
+	background-color: #4287f5;	
+}
+.btn {
+	margin-left: 10px;
+}
+
+a {	
+	text-decoration: underline;
+	color: black;
+}
+a:visited {
+	color: purple;
+}
+a:hover {
+	font-weight:bold;
+}
+a:active {
+	text-decoration: none;
+}	
