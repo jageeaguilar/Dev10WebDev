@@ -26,7 +26,7 @@ document.addEventListener("input", function (event) {
 
 function getBet() {	
 	var betValue = document.getElementById('bet').value;
-	var startingBet = 0;
+	var startingBet = "";
 	
 	if(betValue!="" && betValue > 0) {		
 		startingBet = parseInt(betValue);
@@ -58,13 +58,18 @@ function luckySeven() {
 			gameMoney = gameMoney -1;
 		}
 	}
-	
-	displayResults(startingBet, diceRolls, moneyMax, rollsMax);
+	if (diceRolls > 0){
+		displayResults(startingBet, diceRolls, moneyMax, rollsMax);
+	}
+	else {
+		displayErrorMsg();
+	}
 }
 		
 
 function rollDice() {	
 	return Math.floor(Math.random()*6)+1;
+
 	
 }
 
