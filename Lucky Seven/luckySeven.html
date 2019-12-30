@@ -1,17 +1,85 @@
 <!DOCTYPE html>
+
+<!--
+Name: Josh Aguilar
+Date Created: 12/25/2019
+Most recent revision:
+-->
+
 <html>
-<head>
-	<title>Lucky Sevens</title>
-</head>
-<body>
-	<h1>Lucky Sevens</h1>
-	
-	<!-- need action type? -->
-	<form>
-		<label for="bet">Starting Bet:</label>
-		<input type="number" id="bet" name="userInput" value="$ 0.00" min=0.00><br />
-		<input type="submit" value="Play">
-	</form>
-<script type="text/javascript" src="luckySeven.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name-"viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+		
+		<title>Lucky Sevens</title>
+		
+		<!--Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/download/ -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+	</head>
+	<body onsubmit="luckySeven()">
+		<main class="container">
+		
+			<div class = "row">
+				<div class = "col text-center">
+					<h1>Lucky Sevens</h1>
+				</div>
+			</div>
+		
+			<section class = "form-group" name="formBet" method="POST" onsubmit="return false">
+				<div class = "row">
+					<div class = "col-12 text-center p-3">
+						<form id = "form">
+							<div class = "form-group form-row">
+								<div class = "col">
+									<label for="bet">Starting Bet:</label>
+									<input type="number" id="bet" placeholder="$0.00" min="0" step="0.01" />
+								</div>	
+							</div>
+							<div class = "form-group form-row">
+								<span id="errorMsg" class="m-auto" style= "color: red; display: none";></span>
+							</div>	
+							<div class = "form-group form-row">	
+								<button id="play" class="m-auto" name="play">Play</button>		
+							</div>	
+							
+						</form>
+					</div>
+				</div>
+			</section>
+			
+			<section id="results" class="row" style="display: none;">
+				<div class = "col offset-1">
+					<hr />
+					<h1 class="text-center">Results</h1>
+					<table class="table table-bordered table-striped">
+						<tr>
+							<th>Starting Bet</th>
+							<td>$<span id="tableStartingBet"></span></td>
+						</tr>
+						<tr>
+							<th>Total Rolls Before Going Broke</th>
+							<td><span id="tableDiceRolls"></th>
+						</tr>
+						<tr>
+							<th>Highest Amount Won</th>
+							<td>$<span id="tableMoneyMax"></span></td>
+						</tr>
+						<tr>
+							<th>Roll Count At Highest Amount Won</th>
+							<td><span id="tableRollsMax"></span></td>
+						</tr>	
+				</div>
+			</section>	
+				
+		
+		</main>
+		
+		<!--CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/download/ -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+
+		<script type="text/javascript" src="luckySeven.js"></script>
+	</body>
 </html>	
